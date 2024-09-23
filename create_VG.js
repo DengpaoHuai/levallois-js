@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   const editor = vg_form.get("editor");
   const platform = vg_form.get("platform");
   const release_date = vg_form.get("release_date");
-  fetch("https://crudcrud.com/api//vg", {
+  fetch("https://crudcrud.com/api/3f31560fd0a0437d8310c505226cecde/vg", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
