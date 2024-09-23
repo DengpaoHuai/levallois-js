@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <form id="searchForm">
+      <input type="text" id="searchInput" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="loader" class="loader"></div>
     <div id="planets"></div>
+    <button onclick="previousPage()" id="backButton">back</button>
+    <button id="nextButton">next</button>
     <script src="planets.js"></script>
   </body>
 </html>
